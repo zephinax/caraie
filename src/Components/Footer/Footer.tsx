@@ -2,14 +2,14 @@ import './Footer.css';
 import { Link } from 'react-router-dom';
 export default function Footer() {
   return (
-    <div className='footer-container container'>
-      <div className='footer-top'>
-        <div className='footer-top-left'>
-          <Link to='/'>
+    <div className="footer-container container">
+      <div className="footer-top">
+        <div className="footer-top-left">
+          <Link to="/">
             <img
-              className='footer-logo'
-              src={new URL('/public/images/logo.png', import.meta.url).href}
-              alt='logo'
+              className="footer-logo"
+              src={new URL('/Images/logo.png', import.meta.url).href}
+              alt="logo"
             />
           </Link>
           <p>
@@ -17,7 +17,7 @@ export default function Footer() {
             business.
           </p>
         </div>
-        <ul className='footer-top-right'>
+        <ul className="footer-top-right">
           <li>
             <span>About</span>
             <a>How it works</a>
@@ -41,17 +41,17 @@ export default function Footer() {
           </li>
         </ul>
       </div>
-      <div className='footer-bottom'>
-        <div className='footer-bottom-left'>
+      <div className="footer-bottom">
+        <div className="footer-bottom-left">
           ©2024{' '}
-          <a style={{ color: '#d24670' }} href='https://www.zephinax.ir'>
+          <a style={{ color: '#d24670' }} href="https://www.zephinax.ir">
             Zephinax.
           </a>{' '}
           All rights reserved
         </div>
-        <div className='footer-bottom-right'>
-          <a href=''>Privacy & Policy</a>
-          <a href=''>Terms & Condition</a>
+        <div className="footer-bottom-right">
+          <a href="">Privacy & Policy</a>
+          <a href="">Terms & Condition</a>
         </div>
       </div>
     </div>

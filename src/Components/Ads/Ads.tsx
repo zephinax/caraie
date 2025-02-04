@@ -26,30 +26,28 @@ const data = [
 
 export default function Ads() {
   return (
-    <div className='ads container'>
+    <div className="ads container">
       {data &&
         data.map((ad: Ad) => {
           return (
             <Link
               key={ad.id}
-              to='/Category'
-              className='ad-card user-select-none'>
-              <div className='ad-content'>
-                <div className='ad-description'>
+              to="/Category"
+              className="ad-card user-select-none">
+              <div className="ad-content">
+                <div className="ad-description">
                   <h1>{ad.title}</h1>
                   <p>{ad.desc}</p>
                 </div>
               </div>
-              <div className='ad-image-container'>
+              <div className="ad-image-container">
                 <div>
                   <img
-                    src={
-                      new URL(`/public/images/${ad.img}`, import.meta.url).href
-                    }
+                    src={new URL(`/Images/${ad.img}`, import.meta.url).href}
                     alt={ad.title}
                   />
                 </div>
-                <span className='ad-btn'>
+                <span className="ad-btn">
                   Rental Car
                   <MdKeyboardArrowRight size={24} />
                 </span>
