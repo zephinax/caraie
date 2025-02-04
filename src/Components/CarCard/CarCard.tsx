@@ -42,13 +42,13 @@ const CarCard = memo(
         {img !== '' ? (
           <img
             className='car-img user-select-none'
-            src={new URL(`/public/images/cars/${img}`, import.meta.url).href}
+            src={new URL(`/Images/cars/${img}`, import.meta.url).href}
             alt={img}
           />
         ) : (
           <img
             className='car-img user-select-none'
-            src={new URL('/public/images/noImg.webp', import.meta.url).href}
+            src={new URL('/Images/noImg.webp', import.meta.url).href}
             alt='No Image Found'
           />
         )}
