@@ -8,12 +8,12 @@
 }
 
 .ad-card:nth-child(1) {
-  background: var(--secondary-blue) url('./../../../public/images/adBg1.png')
-    no-repeat center/cover;
+  background: var(--secondary-blue) url('/Images/adBg1.png') no-repeat
+    center/cover;
 }
 .ad-card:nth-child(2) {
-  background: var(--primary-blue) url('./../../../public/images/adBg2.png')
-    no-repeat center/cover;
+  background: var(--primary-blue) url('/Images/adBg2.png') no-repeat
+    center/cover;
 }
 
 .ad-card {
