@@ -42,10 +42,7 @@ export default function Ads() {
               </div>
               <div className="ad-image-container">
                 <div>
-                  <img
-                    src={new URL(`/Images/${ad.img}`, import.meta.url).href}
-                    alt={ad.title}
-                  />
+                  <img src={`/Images/${ad.img}`} alt={ad.title} />
                 </div>
                 <span className="ad-btn">
                   Rental Car
