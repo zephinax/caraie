@@ -93,8 +93,8 @@
   }
 
   .ad-card:nth-child(1) {
-    background: var(--primary-blue) url('./../../../public/images/adBg1.png')
-      no-repeat center/cover;
+    background: var(--primary-blue) url('/Images/adBg1.png') no-repeat
+      center/cover;
   }
 }
 
