@@ -8,13 +8,14 @@ import { BiSearchAlt } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
 import ToolTip from '../ToolTip/ToolTip';
 export default function Header() {
+  const assetBase = '/caraie/';
   return (
     <>
       <div className="header container">
         <div className="header-left">
           <Link to="/" className="header-logo">
             <img
-              src={new URL('/Images/logo.png', import.meta.url).href}
+              src={`${assetBase}Images/logo.png`}
               alt="Caraie logo"
             />
           </Link>
@@ -47,7 +48,7 @@ export default function Header() {
           </button>
           <button className="header-action tool-tip">
             <img
-              src={new URL('/Images/profile.png', import.meta.url).href}
+              src={`${assetBase}Images/profile.png`}
               alt=""
             />
             <span className="tool-tip-text tool-tip-top">Account</span>

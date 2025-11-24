@@ -2,6 +2,8 @@ import './Ads.css';
 import { Link } from 'react-router-dom';
 import { MdKeyboardArrowRight } from 'react-icons/md';
 
+const assetBase = '/caraie/';
+
 export interface Ad {
   title: string;
   desc: string;
@@ -42,7 +44,7 @@ export default function Ads() {
               </div>
               <div className="ad-image-container">
                 <div>
-                  <img src={`/Images/${ad.img}`} alt={ad.title} />
+                  <img src={`${assetBase}Images/${ad.img}`} alt={ad.title} />
                 </div>
                 <span className="ad-btn">
                   Rental Car

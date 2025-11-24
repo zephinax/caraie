@@ -1,6 +1,7 @@
 import './Footer.css';
 import { Link } from 'react-router-dom';
 export default function Footer() {
+  const assetBase = '/caraie/';
   return (
     <div className="footer-container container">
       <div className="footer-top">
@@ -8,7 +9,7 @@ export default function Footer() {
           <Link to="/">
             <img
               className="footer-logo"
-              src={new URL('/Images/logo.png', import.meta.url).href}
+              src={`${assetBase}Images/logo.png`}
               alt="logo"
             />
           </Link>

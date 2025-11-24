@@ -32,6 +32,7 @@ const CarCard = memo(
     discount,
     isLiked,
   }: cardProps) => {
+    const assetBase = '/caraie/';
     return (
       <div className="card-container user-select-none">
         <div className="card-name-like user-select-none">
@@ -42,13 +43,13 @@ const CarCard = memo(
         {img !== '' ? (
           <img
             className="car-img user-select-none"
-            src={`/Images/cars/${img}`}
+            src={`${assetBase}Images/cars/${img}`}
             alt={img}
           />
         ) : (
           <img
             className="car-img user-select-none"
-            src={'/Images/noImg.webp'}
+            src={`${assetBase}Images/noImg.webp`}
             alt="No Image Found"
           />
         )}
