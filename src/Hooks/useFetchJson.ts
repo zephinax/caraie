@@ -6,6 +6,7 @@ export const useFetchJson = <T>(
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<Error | null>(null);
+  const assetBase = '/caraie/';
 
   useEffect(() => {
     const fetchData = async (url: string) => {
@@ -23,10 +24,9 @@ export const useFetchJson = <T>(
       }
     };
     if (jsonPath) {
-      const prefix = new URL(`/public/db/${jsonPath}`, import.meta.url).href;
-      fetchData(prefix);
+      fetchData(`${assetBase}db/${jsonPath}`);
     }
-  }, [jsonPath]);
+  }, [jsonPath, assetBase]);
 
   return { data, loading, error };
 };

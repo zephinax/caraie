@@ -1,28 +1,26 @@
 import { useState } from 'react';
 import ImageGallery from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
-import insidePic11 from './../../../public/Images/carsInside/Carinside1.jpg';
-import insidePic12 from './../../../public/Images/carsInside/Carinside2.jpg';
-import insidePic13 from './../../../public/Images/carsInside/Carinside3.jpg';
-import insidePic14 from './../../../public/Images/carsInside/Carinside4.jpg';
 import './Gallery.css';
+
+const assetBase = '/caraie/';
 
 const images = [
   {
-    original: insidePic11,
-    thumbnail: insidePic11,
+    original: `${assetBase}Images/carsInside/Carinside1.jpg`,
+    thumbnail: `${assetBase}Images/carsInside/Carinside1.jpg`,
   },
   {
-    original: insidePic12,
-    thumbnail: insidePic12,
+    original: `${assetBase}Images/carsInside/Carinside2.jpg`,
+    thumbnail: `${assetBase}Images/carsInside/Carinside2.jpg`,
   },
   {
-    original: insidePic13,
-    thumbnail: insidePic13,
+    original: `${assetBase}Images/carsInside/Carinside3.jpg`,
+    thumbnail: `${assetBase}Images/carsInside/Carinside3.jpg`,
   },
   {
-    original: insidePic14,
-    thumbnail: insidePic14,
+    original: `${assetBase}Images/carsInside/Carinside4.jpg`,
+    thumbnail: `${assetBase}Images/carsInside/Carinside4.jpg`,
   },
 ];
 export default function Gallery() {

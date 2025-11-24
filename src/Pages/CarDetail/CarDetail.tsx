@@ -4,8 +4,8 @@ import './CarDetail.css';
 import Gallery from '../../Components/Gallery/Gallery';
 import Content from '../../Components/Content/Content';
 import CarWrapper from '../../Components/CarWrapper/CarWrapper';
-import CarsJson from './../../../public/db/cars.json';
 import LoadingSpiner from '../../Components/LoadingSpiner/LoadingSpiner';
+import { useFetchJson } from '../../Hooks/useFetchJson';
 
 interface Car {
   id: string;
@@ -28,18 +28,22 @@ export default function CarDetail() {
   const pathParts = location.pathname.split('/');
   const carId = pathParts[pathParts.length - 1];
   const [loading, setLoading] = useState(true);
+  const { data: carsData, loading: carsLoading } =
+    useFetchJson<Car[]>('cars.json');
 
   useEffect(() => {
     const setTargerCar = async () => {
-      if (CarsJson && carId) {
-        const car = await CarsJson.find((car) => car.id === carId);
-        await setTargetCar(car as Car);
+      if (carsData && carId) {
+        const car = await carsData.find((car) => car.id === carId);
+        await setTargetCar(car ?? null);
         setLoading(false);
       }
       window.scrollTo({ top: 0 });
     };
-    setTargerCar();
-  }, [carId]);
+    if (!carsLoading) {
+      setTargerCar();
+    }
+  }, [carId, carsData, carsLoading]);
 
   return (
     <>
@@ -57,7 +61,7 @@ export default function CarDetail() {
         />
       )}
       <div style={{ marginBottom: '16px' }}></div>
-      <LoadingSpiner loading={loading} />
+      <LoadingSpiner loading={loading || carsLoading} />
     </>
   );
 }

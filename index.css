@@ -1,6 +1,6 @@
 @font-face {
   font-family: PlusJakarta;
-  src: url('./public/fonts/PlusJakartaSans-VariableFont_wght.ttf');
+  src: url('/caraie/fonts/PlusJakartaSans-VariableFont_wght.ttf');
 }
 /* Css Reset */
 *,
