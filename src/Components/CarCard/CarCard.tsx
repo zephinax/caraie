@@ -32,7 +32,7 @@ const CarCard = memo(
     discount,
     isLiked,
   }: cardProps) => {
-    const assetBase = '/caraie/';
+    const assetBase = '/';
     return (
       <div className="card-container user-select-none">
         <div className="card-name-like user-select-none">

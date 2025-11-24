@@ -4,7 +4,7 @@ export const useCarsDb = <T>() => {
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<Error | null>(null);
-  const jsonPath = '/caraie/db/Cars.json';
+  const jsonPath = '/db/Cars.json';
 
   const fetchData = async (url: string) => {
     try {

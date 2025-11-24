@@ -6,7 +6,7 @@ export const useFetchJson = <T>(
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<Error | null>(null);
-  const assetBase = '/caraie/';
+  const assetBase = '/';
 
   useEffect(() => {
     const fetchData = async (url: string) => {

@@ -8,7 +8,7 @@ import { BiSearchAlt } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
 import ToolTip from '../ToolTip/ToolTip';
 export default function Header() {
-  const assetBase = '/caraie/';
+  const assetBase = '/';
   return (
     <>
       <div className="header container">

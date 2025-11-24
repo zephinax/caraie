@@ -2,7 +2,7 @@ import './Ads.css';
 import { Link } from 'react-router-dom';
 import { MdKeyboardArrowRight } from 'react-icons/md';
 
-const assetBase = '/caraie/';
+const assetBase = '/';
 
 export interface Ad {
   title: string;

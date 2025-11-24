@@ -1,7 +1,7 @@
 import './Footer.css';
 import { Link } from 'react-router-dom';
 export default function Footer() {
-  const assetBase = '/caraie/';
+  const assetBase = '/';
   return (
     <div className="footer-container container">
       <div className="footer-top">
