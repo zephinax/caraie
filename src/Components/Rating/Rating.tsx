@@ -1,4 +1,4 @@
-import React from 'react';
+import { useId, Fragment } from 'react';
 import './Rating.css';
 
 interface RatingProps {
@@ -8,20 +8,21 @@ interface RatingProps {
 export default function Rating({ rating = 0 }: RatingProps) {
   const maxRating = 5;
   const clampedRating = Math.min(Math.max(rating, 0), maxRating);
+  const uniqueId = useId();
 
   return (
     <div className='rating'>
       {Array.from({ length: maxRating }, (_, index) => (
-        <React.Fragment key={index}>
+        <Fragment key={index}>
           <input
             type='radio'
-            id={`star-${index + 1}`}
-            name='star-radio'
+            id={`${uniqueId}-star-${index + 1}`}
+            name={`${uniqueId}-star-radio`}
             value={`star-${index + 1}`}
             checked={index < clampedRating}
             readOnly
           />
-          <label htmlFor={`star-${index + 1}`}>
+          <label htmlFor={`${uniqueId}-star-${index + 1}`}>
             <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>
               <path
                 pathLength='360'
@@ -29,7 +30,7 @@ export default function Rating({ rating = 0 }: RatingProps) {
               />
             </svg>
           </label>
-        </React.Fragment>
+        </Fragment>
       ))}
     </div>
   );

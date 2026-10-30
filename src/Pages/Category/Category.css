@@ -1,46 +1,114 @@
 .category-container {
   display: flex;
-  min-height: 100vh;
-  align-items: start;
-  flex-wrap: wrap;
+  min-height: calc(100vh - 80px);
+  width: 100%;
+  align-items: stretch;
+  background-color: var(--primary-bg);
+}
+
+.category-mobile-filter-bar {
+  display: none;
+  width: 100%;
+  padding: 12px 16px;
+  background-color: var(--secondary-bg);
+  border-bottom: 1px solid var(--border-color);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.category-mobile-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--primary-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary-text);
+  cursor: pointer;
+}
+
+.category-active-count {
+  background-color: var(--primary-blue);
+  color: #fff;
+  border-radius: 12px;
+  padding: 2px 8px;
+  font-size: 11px;
 }
 
 .category-selector {
-  flex: 1;
-  padding: 32px;
-  padding-right: 0;
-  height: 100%;
+  width: 290px;
+  min-width: 280px;
+  max-width: 320px;
+  padding: 32px 24px;
+  background-color: var(--secondary-bg);
+  min-height: 100%;
   display: flex;
-  gap: 32px;
+  gap: 28px;
   flex-direction: column;
+  border-right: 1px solid var(--border-color);
+  box-sizing: border-box;
+}
+
+@media (min-width: 901px) {
+  .category-container {
+    flex-wrap: nowrap;
+  }
+
+  .category-selector {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    max-height: 100vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-color) transparent;
+  }
+}
+
+.category-selector-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.category-reset-btn {
+  background: transparent;
+  border: none;
+  color: var(--primary-blue);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.category-reset-btn:hover {
+  text-decoration: underline;
 }
 
 .category-cars {
-  flex: 6;
-  height: 100%;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  flex: 1;
+  min-width: 0;
+  padding: 24px 24px 48px;
 }
 
 .category-section {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  align-items: start;
+  gap: 14px;
+  align-items: flex-start;
+  width: 100%;
 }
 
 .category-title {
   color: var(--secondary-text);
   font-size: 12px;
   font-weight: 500;
-}
-
-/* From Uiverse.io by Li-Deheng */
-.card-conteiner {
-  cursor: default;
-  --color-primary: #275efe;
-  --color-headline: #3f4656;
-  --color-text: #99a3ba;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
 .card-content {
@@ -51,129 +119,116 @@
 
 .card-content .card-title {
   font-family: inherit;
-  font-size: 18px;
-  font-weight: 700;
-  margin: 0 0 10px 0;
-  color: var(--color-headline);
-}
-
-.card-content .card-title span {
+  font-size: 12px;
   font-weight: 500;
-}
-
-.card-content .values div,
-.card-content .current-range div {
-  display: inline-block;
-  vertical-align: top;
+  margin: 0 0 10px 0;
+  color: var(--secondary-text);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .card-content .values {
   margin: 0;
   font-weight: 500;
-  color: var(--color-primary);
-}
-
-.card-content .values > div:first-child {
-  margin-right: 2px;
-}
-
-.card-content .values > div:last-child {
-  margin-left: 2px;
+  color: var(--primary-blue);
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .card-content .current-range {
   display: block;
-  color: var(--color-text);
-  margin-top: 8px;
-  font-size: 14px;
+  color: var(--tertiary-text);
+  margin-top: 6px;
+  font-size: 13px;
+  font-weight: 400;
 }
 
-.card-content .slider {
+.price-slider-group {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.price-slider-label {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
-  font-size: 0.6em;
-  color: var(--color-text);
+  font-size: 12px;
+  color: var(--secondary-text);
+  font-weight: 400;
 }
 
-/* Range Slider */
-.input-ranges[type='range'] {
-  width: 210px;
-  height: 30px;
-  overflow: hidden;
-  outline: none;
+.price-slider-label strong {
+  color: var(--primary-text);
+  font-weight: 500;
 }
 
-.input-ranges[type='range'],
-.input-ranges[type='range']::-webkit-slider-runnable-track,
-.input-ranges[type='range']::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  background: none;
-}
-
-.input-ranges[type='range']::-webkit-slider-runnable-track {
-  width: 200px;
-  height: 1px;
-  background: var(--color-headline);
-}
-
-.input-ranges[type='range']:nth-child(2)::-webkit-slider-runnable-track {
-  background: none;
-}
-
-.input-ranges[type='range']::-webkit-slider-thumb {
-  position: relative;
-  height: 15px;
-  width: 15px;
-  margin-top: -7px;
-  background: #fff;
-  border: 1px solid var(--color-headline);
-  border-radius: 25px;
+.price-slider-input {
+  width: 100%;
+  accent-color: var(--primary-blue);
   cursor: pointer;
-  z-index: 1;
-  transition: 0.5s;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -o-transition: 0.5s;
+  height: 6px;
+  border-radius: 3px;
 }
 
-.input-ranges[type='range']::-webkit-slider-thumb:hover {
-  background: #eaefff;
-  border: 1px solid var(--color-primary);
-  outline: 0.5px solid var(--color-primary);
+.price-fleet-bounds {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--secondary-text);
+  margin-top: 2px;
+  padding: 0 2px;
 }
 
-.input-ranges[type='range']::-webkit-slider-thumb:active {
-  cursor: grabbing;
+.search-active-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: var(--primary-blue-hover);
+  color: var(--primary-blue);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 8px;
 }
 
-.input-ranges[type='range']:nth-child(1)::-webkit-slider-thumb {
-  z-index: 2;
+.search-active-pill button {
+  background: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
-.rangeslider {
-  font-family: sans-serif;
-  font-size: 14px;
-  position: relative;
-  height: 20px;
-  width: 210px;
-  display: inline-block;
-  margin-top: -5px;
-}
+@media (max-width: 900px) {
+  .category-container {
+    flex-direction: column;
+  }
 
-.rangeslider input {
-  position: absolute;
-}
+  .category-mobile-filter-bar {
+    display: flex;
+  }
 
-.rangeslider span {
-  position: absolute;
-  margin-top: 20px;
-  left: 0;
-}
+  .category-selector {
+    display: none;
+    max-width: 100%;
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+    position: static;
+    height: auto;
+    max-height: none;
+  }
 
-.rangeslider .right {
-  position: relative;
-  float: right;
-  margin-right: -5px;
+  .category-selector.open {
+    display: flex;
+  }
 }

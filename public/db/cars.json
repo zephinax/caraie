@@ -7,10 +7,10 @@
     "gear": "Manual",
     "personCapacity": "2",
     "img": "Koenigsegg.png",
-    "price": "110",
-    "discount": "",
+    "price": "3200",
+    "discount": "2800",
     "description": "The Koenigsegg is a Swedish hypercar that boasts an incredible 1,340 horsepower and a top speed of over 250 mph. With its sleek and aerodynamic design, this car is a true engineering marvel, combining cutting-edge technology with unparalleled performance. The Koenigsegg is a dream car for any automotive enthusiast, offering an exhilarating driving experience like no other.",
-    "rating": "1",
+    "rating": "5",
     "isLiked": "true"
   },
   {
@@ -21,10 +21,10 @@
     "gear": "Manual",
     "personCapacity": "2",
     "img": "NissanGTR.png",
-    "price": "100",
-    "discount": "98",
+    "price": "340",
+    "discount": "290",
     "description": "The Nissan GT-R is a high-performance sports car that combines impressive acceleration with advanced technology and handling. With its powerful twin-turbo V6 engine and sophisticated all-wheel-drive system, the GT-R delivers blistering performance and exceptional grip on the road. Its sleek and aggressive styling turns heads wherever it goes, making it a true icon in the world of sports cars.",
-    "rating": "2"
+    "rating": "4"
   },
   {
     "id": "4",
@@ -34,10 +34,10 @@
     "gear": "Manual",
     "personCapacity": "4",
     "img": "Cls63.png",
-    "price": "115",
-    "discount": "",
+    "price": "300",
+    "discount": "260",
     "description": "The Mercedes-Benz CLS 63 is a high-performance luxury sedan that offers exceptional power and comfort. With its powerful AMG-tuned V8 engine and sophisticated suspension system, the CLS 63 delivers thrilling performance while maintaining the luxurious and refined interior that Mercedes is known for. This car is the perfect blend of style, luxury, and performance, making it a true standout in its class.",
-    "rating": "1",
+    "rating": "5",
     "isLiked": "true"
   },
   {
@@ -48,10 +48,10 @@
     "gear": "Auto",
     "personCapacity": "4",
     "img": "BMW M3.png",
-    "price": "80",
-    "discount": "",
+    "price": "240",
+    "discount": "210",
     "description": "The BMW M3 is a high-performance sports sedan that offers exceptional handling and acceleration. With its powerful inline-six engine and finely-tuned suspension, the M3 delivers a thrilling driving experience on the track or on winding roads. Its sleek and aggressive styling is a testament to BMW's commitment to performance and design, making it a true icon in the world of sports sedans.",
-    "rating": "2"
+    "rating": "4"
   },
   {
     "id": "1",
@@ -61,10 +61,10 @@
     "gear": "Auto",
     "personCapacity": "2",
     "img": "AMG GTR.png",
-    "price": "120",
-    "discount": "119",
+    "price": "550",
+    "discount": "480",
     "description": "The Mercedes-AMG GT R is a high-performance sports car that combines exceptional speed with impressive handling and agility. With its powerful twin-turbo V8 engine and advanced aerodynamics, the GT R delivers blistering acceleration and razor-sharp handling, making it a true track-focused machine. Its aggressive styling and attention to detail make it a standout in the world of high-performance sports cars.",
-    "rating": "1",
+    "rating": "5",
     "isLiked": "true"
   },
   {
@@ -75,10 +75,10 @@
     "gear": "Manual",
     "personCapacity": "4",
     "img": "Rolls - Royce.png",
-    "price": "115",
-    "discount": "",
+    "price": "1100",
+    "discount": "950",
     "description": "The Rolls-Royce Ghost is a luxurious sedan that offers exceptional comfort and refinement. With its handcrafted interior and smooth, powerful engine, the Ghost provides an unparalleled driving experience. This car is the epitome of luxury and sophistication, offering a level of craftsmanship and attention to detail that is second to none.",
-    "rating": "1"
+    "rating": "5"
   },
   {
     "id": "7",
@@ -88,10 +88,10 @@
     "gear": "Manual",
     "personCapacity": "6",
     "img": "Trios.png",
-    "price": "60",
-    "discount": "",
+    "price": "95",
+    "discount": "85",
     "description": "The Trios is a spacious and practical SUV that offers exceptional value for its price. With its roomy interior and versatile cargo space, the Trios is perfect for families or those who need a capable and reliable vehicle for everyday use. Its rugged design and capable performance make it a great choice for those who enjoy outdoor adventures or need a vehicle that can handle tough conditions.",
-    "rating": "3"
+    "rating": "4"
   },
   {
     "id": "8",
@@ -101,10 +101,10 @@
     "gear": "Manual",
     "personCapacity": "4",
     "img": "CR-VB.png",
-    "price": "81",
-    "discount": "80",
+    "price": "85",
+    "discount": "70",
     "description": "The CR-VB is a compact SUV that offers exceptional fuel efficiency and practicality. With its spacious interior and versatile cargo space, the CR-VB is perfect for city driving or weekend getaways. Its efficient engine and nimble handling make it a joy to drive, while its modern design and features provide a comfortable and enjoyable driving experience.",
-    "rating": "3"
+    "rating": "4"
   },
   {
     "id": "9",
@@ -114,8 +114,8 @@
     "gear": "Manual",
     "personCapacity": "4",
     "img": "MG-ZX.png",
-    "price": "85",
-    "discount": "",
+    "price": "65",
+    "discount": "55",
     "description": "The MG ZX Exclusive is a stylish and feature-packed hatchback that offers exceptional value for its price. With its sleek and modern design, the ZX Exclusive turns heads wherever it goes. Its efficient engine and nimble handling make it a joy to drive in the city, while its spacious interior and versatile cargo space make it a practical choice for everyday use.",
     "rating": "3"
   },
@@ -127,10 +127,10 @@
     "gear": "Manual",
     "personCapacity": "4",
     "img": "CR-V.png",
-    "price": "80",
-    "discount": "",
+    "price": "90",
+    "discount": "75",
     "description": "The CR-V is a compact SUV that offers exceptional fuel efficiency and practicality. With its spacious interior and versatile cargo space, the CR-V is perfect for families or those who need a capable and reliable vehicle for everyday use. Its efficient engine and smooth handling make it a joy to drive, while its modern design and features provide a comfortable and enjoyable driving experience.",
-    "rating": "3"
+    "rating": "4"
   },
   {
     "id": "11",
@@ -140,10 +140,10 @@
     "gear": "Auto",
     "personCapacity": "2",
     "img": "Audi R8.png",
-    "price": "150",
-    "discount": "",
+    "price": "520",
+    "discount": "450",
     "description": "The Audi R8 is a high-performance sports car that offers exceptional acceleration and handling. With its powerful mid-engine layout and sleek, aerodynamic design, the R8 delivers a thrilling driving experience on the track or on winding roads. Its advanced technology and attention to detail make it a true standout in the world of high-performance sports cars.",
-    "rating": "1"
+    "rating": "5"
   },
   {
     "id": "12",
@@ -153,10 +153,10 @@
     "gear": "Manual",
     "personCapacity": "2",
     "img": "911.png",
-    "price": "140",
-    "discount": "",
+    "price": "420",
+    "discount": "380",
     "description": "The Porsche 911 is a high-performance sports car that offers exceptional handling and acceleration. With its iconic rear-engine layout and legendary performance, the 911 has been a benchmark for sports cars for decades. Its sleek and timeless design, combined with its advanced engineering and technology, make it a true icon in the automotive world.",
-    "rating": "1",
+    "rating": "5",
     "isLiked": "true"
   },
   {
@@ -167,10 +167,10 @@
     "gear": "Auto",
     "personCapacity": "2",
     "img": "Aventador.png",
-    "price": "400",
-    "discount": "",
+    "price": "1650",
+    "discount": "1450",
     "description": "The Lamborghini Aventador is a high-performance hypercar that offers exceptional speed and acceleration. With its powerful V12 engine and advanced aerodynamics, the Aventador delivers blistering performance and jaw-dropping looks. This car is a true masterpiece of engineering and design, combining cutting-edge technology with breathtaking styling that is sure to turn heads wherever it goes.",
-    "rating": "1"
+    "rating": "5"
   },
   {
     "id": "14",
@@ -180,10 +180,10 @@
     "gear": "Auto",
     "personCapacity": "5",
     "img": "Tesla S.png",
-    "price": "100",
-    "discount": "",
+    "price": "200",
+    "discount": "175",
     "description": "The Tesla Model S is a high-performance luxury sedan that offers exceptional acceleration and range. With its advanced electric powertrain and cutting-edge technology, the Model S delivers a smooth and exhilarating driving experience, while also being environmentally friendly. Its sleek and modern design, combined with its spacious and luxurious interior, make it a true standout in the world of luxury sedans.",
-    "rating": "1"
+    "rating": "4"
   },
   {
     "id": "15",
@@ -193,9 +193,9 @@
     "gear": "Manual",
     "personCapacity": "4",
     "img": "FordMustang.png",
-    "price": "60",
-    "discount": "",
+    "price": "115",
+    "discount": "95",
     "description": "The Ford Mustang is a high-performance sports car that offers exceptional acceleration and handling. With its powerful engine and iconic styling, the Mustang has been a symbol of American muscle for decades. Its aggressive design and thrilling performance make it a true icon in the world of sports cars, offering an exhilarating driving experience that is sure to excite any automotive enthusiast.",
-    "rating": "2"
+    "rating": "4"
   }
 ]

@@ -1,23 +1,12 @@
 import { Link } from 'react-router-dom';
 import CarCard from '../CarCard/CarCard';
 import './CarWrapper.css';
-import { useEffect } from 'react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useFetchJson } from '../../Hooks/useFetchJson';
-
-interface CarWrapper {
-  slide?: boolean | undefined;
-  title: string;
-  url?: string | undefined;
-  linkTitle?: string;
-  link?: string;
-  remove?: string;
-  setLoad?: void;
-  filter?: string;
-}
+import { IoCarSportOutline } from 'react-icons/io5';
 
 interface Car {
-  id: number;
+  id: string | number;
   name: string;
   category: string;
   fuelCapacity: string;
@@ -26,7 +15,20 @@ interface Car {
   personCapacity: string;
   price: string;
   discount: string;
-  isLiked: string;
+  isLiked?: string;
+}
+
+interface CarWrapperProps {
+  slide?: boolean;
+  title: string;
+  url?: string;
+  linkTitle?: string;
+  link?: string;
+  remove?: string;
+  setLoad?: void;
+  filter?: string;
+  cars?: Car[];
+  onResetFilters?: () => void;
 }
 
 export default function CarWrapper({
@@ -36,23 +38,30 @@ export default function CarWrapper({
   remove,
   linkTitle,
   link = '/',
-}: CarWrapper) {
-  const [cars, setCars] = useState<Car[] | null>(null);
+  cars: passedCars,
+  onResetFilters,
+}: CarWrapperProps) {
+  const [internalCars, setInternalCars] = useState<Car[] | null>(null);
   const { data: carsData } = useFetchJson<Car[]>('cars.json');
+
   useEffect(() => {
+    if (passedCars !== undefined) return;
     if (!carsData) return;
+
     if (filter) {
       const filteredCars = carsData.filter((car: Car) => car.category === filter);
       if (remove) {
         const removedTarget = filteredCars.filter((car: Car) => car.name !== remove);
-        setCars(removedTarget);
+        setInternalCars(removedTarget);
       } else {
-        setCars(filteredCars);
+        setInternalCars(filteredCars);
       }
     } else {
-      setCars(carsData);
+      setInternalCars(carsData);
     }
-  }, [filter, remove, carsData]);
+  }, [filter, remove, carsData, passedCars]);
+
+  const displayedCars = passedCars !== undefined ? passedCars : internalCars;
 
   return (
     <div className='car-wrapper'>
@@ -64,13 +73,63 @@ export default function CarWrapper({
           </Link>
         )}
       </div>
-      <div
-        className={`car-wrapper-grid container ${
-          slide && 'car-wrapper-slide'
-        }`}>
-        {Array.isArray(cars) &&
-          cars.map((car: Car) => {
-            return (
+
+      {displayedCars && displayedCars.length === 0 ? (
+        <div
+          className='container'
+          style={{
+            padding: '48px 20px',
+            textAlign: 'center',
+            backgroundColor: 'var(--secondary-bg)',
+            borderRadius: '10px',
+            marginTop: '16px',
+            boxShadow: 'rgba(0, 0, 0, 0.02) 0px 5px 10px',
+          }}>
+          <IoCarSportOutline
+            size={48}
+            style={{ color: 'var(--secondary-text)', opacity: 0.7, marginBottom: '12px' }}
+          />
+          <h3
+            style={{
+              fontSize: '18px',
+              fontWeight: 600,
+              color: 'var(--primary-text)',
+              marginBottom: '8px',
+            }}>
+            No cars found matching your criteria
+          </h3>
+          <p
+            style={{
+              fontSize: '14px',
+              color: 'var(--secondary-text)',
+              marginBottom: '16px',
+            }}>
+            Try adjusting your search query, price range, or category filters.
+          </p>
+          {onResetFilters && (
+            <button
+              onClick={onResetFilters}
+              style={{
+                backgroundColor: 'var(--primary-blue)',
+                color: '#fff',
+                border: 'none',
+                borderRadius: '8px',
+                padding: '10px 20px',
+                fontWeight: 600,
+                cursor: 'pointer',
+                fontSize: '14px',
+              }}>
+              Reset All Filters
+            </button>
+          )}
+        </div>
+      ) : (
+        <div
+          className={`car-wrapper-grid container ${
+            slide ? 'car-wrapper-slide' : ''
+          }`}>
+          {Array.isArray(displayedCars) &&
+            displayedCars.map((car: Car) => (
               <CarCard
                 id={car.id}
                 key={car.id}
@@ -84,9 +143,9 @@ export default function CarWrapper({
                 discount={car.discount}
                 isLiked={car.isLiked}
               />
-            );
-          })}
-      </div>
+            ))}
+        </div>
+      )}
     </div>
   );
 }

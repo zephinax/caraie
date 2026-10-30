@@ -16,10 +16,10 @@ export default function Home() {
         slide={true}
         title='Sport Cars'
         linkTitle='View All'
-        link='/Category'
+        link='/category'
         filter='Sport'
       />
-      <CarWrapper title='All Cars' linkTitle='View All' link='/Category' />
+      <CarWrapper title='All Cars' linkTitle='View All' link='/category' />
     </div>
   );
 }

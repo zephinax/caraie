@@ -18,19 +18,19 @@
       "gear": "Auto",
       "personCapacity": "2",
       "img": "AMG GTR.png",
-      "price": "120",
-      "discount": "119"
+      "price": "550",
+      "discount": "480"
     },
     {
       "id": "1",
       "name": "Koenigsegg",
-      "category": "Sport",
+      "category": "Hypercar",
       "fuelCapacity": "90",
       "gear": "Manual",
       "personCapacity": "2",
       "img": "Koenigsegg.png",
-      "price": "110",
-      "discount": ""
+      "price": "3200",
+      "discount": "2800"
     },
     {
       "id": "2",
@@ -40,19 +40,19 @@
       "gear": "Manual",
       "personCapacity": "2",
       "img": "NissanGTR.png",
-      "price": "100",
-      "discount": "98"
+      "price": "340",
+      "discount": "290"
     },
     {
       "id": "3",
       "name": "Mercedes CLS 63",
-      "category": "Sport",
+      "category": "Luxury",
       "fuelCapacity": "70",
       "gear": "Manual",
       "personCapacity": "4",
       "img": "Cls63.png",
-      "price": "115",
-      "discount": ""
+      "price": "300",
+      "discount": "260"
     }
   ],
   "Recommendation": [
@@ -64,19 +64,19 @@
       "gear": "Auto",
       "personCapacity": "4",
       "img": "BMW M3.png",
-      "price": "80",
-      "discount": ""
+      "price": "240",
+      "discount": "210"
     },
     {
       "id": "2",
       "name": "Rolls Royce Ghost",
-      "category": "Sport",
+      "category": "Luxury",
       "fuelCapacity": "70",
       "gear": "Manual",
       "personCapacity": "4",
       "img": "Rolls - Royce.png",
-      "price": "115",
-      "discount": ""
+      "price": "1100",
+      "discount": "950"
     },
     {
       "id": "3",
@@ -86,8 +86,8 @@
       "gear": "Manual",
       "personCapacity": "6",
       "img": "Trios.png",
-      "price": "60",
-      "discount": ""
+      "price": "95",
+      "discount": "85"
     },
     {
       "id": "4",
@@ -97,8 +97,8 @@
       "gear": "Manual",
       "personCapacity": "4",
       "img": "CR-VB.png",
-      "price": "81",
-      "discount": "80"
+      "price": "85",
+      "discount": "70"
     },
     {
       "id": "5",
@@ -108,19 +108,19 @@
       "gear": "Manual",
       "personCapacity": "4",
       "img": "MG-ZX.png",
-      "price": "85",
-      "discount": ""
+      "price": "65",
+      "discount": "55"
     },
     {
       "id": "6",
       "name": "CR - V",
-      "category": "Sport",
+      "category": "SUV",
       "fuelCapacity": "70",
       "gear": "Manual",
       "personCapacity": "4",
       "img": "CR-V.png",
-      "price": "80",
-      "discount": ""
+      "price": "90",
+      "discount": "75"
     },
     {
       "id": "7",
@@ -130,8 +130,8 @@
       "gear": "Manual",
       "personCapacity": "6",
       "img": "Rush.png",
-      "price": "76",
-      "discount": ""
+      "price": "95",
+      "discount": "80"
     },
     {
       "id": "8",
@@ -141,8 +141,8 @@
       "gear": "Manual",
       "personCapacity": "6",
       "img": "Trios.png",
-      "price": "60",
-      "discount": ""
+      "price": "95",
+      "discount": "85"
     }
   ]
 }

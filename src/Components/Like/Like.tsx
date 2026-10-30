@@ -1,29 +1,35 @@
-import { useState, useEffect } from 'react';
+import { useFavorites } from '../../Context/FavoritesContext';
 import './Like.css';
 
 interface LikeProps {
+  carId?: string | number;
   isLiked?: string;
+  onToggle?: (liked: boolean) => void;
 }
 
-export default function Like({ isLiked = 'false' }: LikeProps) {
-  const [likeStatus, setLikeStatus] = useState(
-    isLiked === 'true' ? 'true' : 'false'
-  );
+export default function Like({ carId, isLiked = 'false', onToggle }: LikeProps) {
+  const { isFavorite, toggleFavorite } = useFavorites();
 
-  useEffect(() => {
-    setLikeStatus(isLiked === 'true' ? 'true' : 'false');
-  }, [isLiked]);
+  const checked = carId !== undefined ? isFavorite(carId) : isLiked === 'true';
+
+  const handleChange = () => {
+    if (carId !== undefined) {
+      toggleFavorite(carId);
+      onToggle?.(!checked);
+    } else {
+      onToggle?.(!checked);
+    }
+  };
 
   return (
     <div className='con-like'>
       <input
         className='like'
-        checked={likeStatus === 'true'}
-        onChange={() => {
-          setLikeStatus(likeStatus === 'true' ? 'false' : 'true');
-        }}
+        checked={checked}
+        onChange={handleChange}
         type='checkbox'
-        title='like'
+        title={checked ? 'Unlike car' : 'Like car'}
+        aria-label={checked ? 'Unlike car' : 'Like car'}
       />
       <div className='checkmark'>
         <svg

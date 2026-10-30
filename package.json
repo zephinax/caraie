@@ -1,8 +1,29 @@
 {
   "name": "caraie",
   "private": false,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Modern and responsive car rental web application built with React, TypeScript, and Vite.",
   "type": "module",
+  "homepage": "https://zephinax.github.io/Caraie",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zephinax/Caraie.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Zephinax/Caraie/issues"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "vite",
+    "car-rental",
+    "morent",
+    "template",
+    "framer-motion",
+    "open-source"
+  ],
+  "author": "Zephinax (https://github.com/Zephinax)",
+  "license": "MIT",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",

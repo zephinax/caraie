@@ -1,0 +1,252 @@
+.rental-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 16px;
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.rental-modal {
+  background: var(--secondary-bg);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  animation: slideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.rental-modal-header {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rental-modal-header h2 {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--primary-text);
+}
+
+.rental-modal-close-btn {
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  color: var(--secondary-text);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 6px;
+  transition: all 0.15s ease;
+}
+
+.rental-modal-close-btn:hover {
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
+}
+
+.rental-modal-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.rental-car-preview {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  background-color: var(--primary-bg);
+  padding: 14px 18px;
+  border-radius: 10px;
+}
+
+.rental-car-preview img {
+  width: 90px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.rental-car-info h3 {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--primary-text);
+}
+
+.rental-car-info p {
+  font-size: 13px;
+  color: var(--secondary-text);
+  margin-top: 2px;
+}
+
+.rental-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+@media (max-width: 500px) {
+  .rental-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.rental-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.rental-form-group label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--secondary-text);
+}
+
+.rental-form-group input,
+.rental-form-group select {
+  padding: 10px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 13px;
+  font-family: inherit;
+  color: var(--primary-text);
+  background-color: var(--secondary-bg);
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.rental-form-group input:focus,
+.rental-form-group select:focus {
+  border-color: var(--primary-blue);
+}
+
+.rental-summary-box {
+  background-color: #f8fafc;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rental-summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--tertiary-text);
+}
+
+.rental-summary-row.total {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--primary-text);
+  border-top: 1px dashed var(--border-color);
+  padding-top: 8px;
+  margin-top: 4px;
+}
+
+.rental-modal-footer {
+  padding: 18px 24px;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.rental-confirm-btn {
+  background-color: var(--primary-blue);
+  color: #fff;
+  border: 1px solid var(--primary-blue);
+  border-radius: 4px;
+  padding: 8px 18px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s linear;
+}
+
+.rental-confirm-btn:hover {
+  background-color: var(--secondary-bg);
+  color: var(--primary-blue);
+}
+
+.rental-cancel-btn {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 13px;
+  color: var(--tertiary-text);
+  cursor: pointer;
+}
+
+.rental-success-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+  gap: 16px;
+}
+
+.rental-success-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #e0f2fe;
+  color: var(--primary-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+.rental-success-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--primary-text);
+}
+
+.rental-success-desc {
+  font-size: 14px;
+  color: var(--secondary-text);
+  max-width: 380px;
+  line-height: 1.5;
+}

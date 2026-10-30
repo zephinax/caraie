@@ -37,7 +37,7 @@ const CarCard = memo(
       <div className="card-container user-select-none">
         <div className="card-name-like user-select-none">
           <h2 className="card-name user-select-none">{name}</h2>
-          <Like isLiked={isLiked} />
+          <Like carId={id} isLiked={isLiked} />
         </div>
         <p className="car-class user-select-none">{category}</p>
         {img !== '' ? (

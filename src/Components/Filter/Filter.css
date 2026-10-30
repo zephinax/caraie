@@ -105,10 +105,30 @@
   color: var(--secondary-text);
 }
 
+.filter-select,
+.filter-input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 1.2em;
+  font-weight: 500;
+  color: var(--secondary-text);
+  font-family: inherit;
+  cursor: pointer;
+  width: 100%;
+  padding-right: 4px;
+}
+
+.filter-select:focus,
+.filter-input:focus {
+  color: var(--primary-text);
+}
+
 .filter-option-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 4px;
 }
 
 @media (max-width: 1100px) {
